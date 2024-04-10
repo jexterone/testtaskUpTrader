@@ -1,0 +1,26 @@
+/* Базовый стиль для меню */
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стиль для каждого пункта меню */
+ul.menu li {
+    display: inline-block;
+    margin-right: 10px; /* Расстояние между пунктами меню */
+}
+
+/* Стиль ссылок в меню */
+ul.menu li a {
+    text-decoration: none;
+    color: #333; /* Цвет текста ссылки */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Стиль активного пункта меню */
+ul.menu li a.active {
+    background-color: #007bff; /* Цвет фона активной ссылки */
+    color: #fff; /* Цвет текста активной ссылки */
+}

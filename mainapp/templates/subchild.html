@@ -1,0 +1,19 @@
+
+{% for subchild in children %}
+
+  {% if subchild != child %}
+  <li>
+    <a href="{% if item.url %}?parent_get={{item.url}}{% endif %}{% if child.url %}&child_get={{child.url}}{% endif %}{% if subchild.url %}&subchild_get={{subchild.url}}{% endif %}" {% if request.GET.subchild_get == subchild.url %}class="active"{% endif %}>
+      {{ subchild.title }}
+    </a>
+    {% if subchild.children.all %}
+    <ul>
+    {% include 'subchild.html' with children=subchild.children.all %}
+      </ul>
+    {% endif %}
+  </li>
+  {% endif %}
+
+{% endfor %}
+
+
